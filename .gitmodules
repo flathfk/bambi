@@ -1,0 +1,19 @@
+[submodule "bambi-admin-web"]
+	path = bambi-admin-web
+	url = https://github.com/hk-toss/bambi-admin-web.git
+
+[submodule "bambi-agent-api"]
+	path = bambi-agent-api
+	url = https://github.com/hk-toss/bambi-agent-api.git
+
+[submodule "bambi-build"]
+	path = bambi-build
+	url = https://github.com/hk-toss/bambi-build.git
+
+[submodule "bambi-service-api"]
+	path = bambi-service-api
+	url = https://github.com/hk-toss/bambi-service-api.git
+
+[submodule "bambi-service-web"]
+	path = bambi-service-web
+	url = https://github.com/hk-toss/bambi-service-web.git
