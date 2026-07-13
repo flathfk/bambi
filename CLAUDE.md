@@ -45,7 +45,7 @@
 - 외부 노출은 **Nginx / Next.js / Spring Boot** 뿐. FastAPI Agent·PostgreSQL·Redis·Kafka는 **내부 전용**.
 - **Service Layer = source of truth.** 인증/인가, 원본 데이터, 최종 카드·피드, AI 로그를 관리하고 **Agent Gateway** 역할을 한다.
 - **Agent Layer는 AI 파생물(요약·관심사·임베딩·RAG·생성로그)만** 다룬다. **`service` DB를 직접 수정하지 않는다.** 사용자 노출 데이터는 반드시 Service API가 저장한다.
-- DB는 **PostgreSQL 1개, `service` / `agent` schema로 분리.** 원본·최종 데이터 = `service`, AI 파생 데이터 = `agent`.
+- DB는 **`service-db` / `agent-db` 2개로 물리 분리** (2026-07-13 변경, 이전 "1 DB + schema 분리"에서 전환). `service-db` = 원본·최종 사용자 데이터(Spring 소유). `agent-db` = AI 파생물·pgvector(Agent/LLM팀 소유, 상세 = bambi-agent-api `docs/agent-db-design.md`). **Agent는 `service-db`를 직접 접근하지 않는다.** 분리 이유 = 워크로드 분리(트랜잭션 vs 벡터검색)·LLM팀 독립 소유·경계를 인프라로 강제.
 - MVP는 Service→Agent **동기 REST 호출**로 먼저 관통한다. Kafka 비동기는 **P1**.
 
 ---

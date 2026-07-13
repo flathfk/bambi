@@ -52,9 +52,14 @@ Spring Boot가 내부 네트워크에서 FastAPI Agent를 호출.
 
 ---
 
-## 4. Database Schema
+## 4. Database (2 DB 물리 분리)
 
-MVP는 물리 DB를 나누지 않고 **PostgreSQL 하나 안에서 schema 분리.**
+> **2026-07-13 변경:** 기존 "1 PostgreSQL + service/agent schema 분리"에서 **`service-db` / `agent-db` 물리 분리(2 DB)**로 전환. 이유 = 워크로드 분리(트랜잭션 vs pgvector/임베딩), LLM팀의 독립 DB 소유, Agent↔Service 경계를 인프라로 강제.
+
+- **`service-db`** (PostgreSQL, Spring 소유) — 원본·최종 사용자 노출 데이터. 아래 `service schema` 목록을 이 DB의 테이블로 읽는다.
+- **`agent-db`** (PostgreSQL + pgvector, Agent/LLM팀 소유) — AI 파생물·임베딩·RAG. **상세 설계 정본은 bambi-agent-api `docs/agent-db-design.md`(송우 소유).** 아래 `agent schema` 목록은 요약일 뿐이다.
+- **AI 로그 경계:** "우리가 agent에 뭘 요청/응답받았나"(관리자 화면용) = `service-db`(소라, Gateway가 기록). agent 내부 운영 로그(토큰·비용 등) = `agent-db`(송우). *→ 송우 확인 예정.*
+- MVP(단일 VM)는 compose에 postgres 컨테이너 2개. Agent 실연동은 P1이고, P0는 Service 쪽 Mock으로 관통.
 
 ```text
 PostgreSQL
