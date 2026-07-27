@@ -46,7 +46,11 @@
 - **Service Layer = source of truth.** 인증/인가, 원본 데이터, 최종 카드·피드, AI 로그를 관리하고 **Agent Gateway** 역할을 한다.
 - **Agent Layer는 AI 파생물(요약·관심사·임베딩·RAG·생성로그)만** 다룬다. **`service` DB를 직접 수정하지 않는다.** 사용자 노출 데이터는 반드시 Service API가 저장한다.
 - DB는 **`service-db` / `agent-db` 2개로 물리 분리** (2026-07-13 변경, 이전 "1 DB + schema 분리"에서 전환). `service-db` = 원본·최종 사용자 데이터(Spring 소유). `agent-db` = AI 파생물·pgvector(Agent/LLM팀 소유, 상세 = bambi-agent-api `docs/agent-db-design.md`). **Agent는 `service-db`를 직접 접근하지 않는다.** 분리 이유 = 워크로드 분리(트랜잭션 vs 벡터검색)·LLM팀 독립 소유·경계를 인프라로 강제.
-- MVP는 Service→Agent **동기 REST 호출**로 먼저 관통한다. Kafka 비동기는 **P1**.
+- **Service→Agent 연동은 비동기(202+Pull)로 확정** (2026-07-27, 결정 1=(C)). 요청은 `202+job_id`로 등록만 하고,
+  완성 콘텐츠는 service-worker가 `publish-snapshot-batches/claim`으로 당겨온다. agent는 service를 절대 호출하지 않는다.
+  상세 계약 = bambi-agent-api `docs/agent-contract.md` v3 · `docs/service-integration-guide.md`.
+- **저장 ≠ 보고서 생성** (2026-07-27 정정). 관심 자료 저장은 AI 요약·주제 분류(위키·관심사)까지만 이어지고,
+  보고서(카드)는 **정기 브리핑 또는 온디맨드 생성 요청**으로만 만들어진다. 생성 트리거 스케줄러는 service 책임(가이드 §3.4).
 
 ---
 
@@ -92,11 +96,34 @@
 - **JWT:** P0는 localStorage access token으로 단순 구현. 보안 고도화 시 httpOnly cookie + refresh token 전환.
 - **DB 마이그레이션:** Flyway 사용, 배포는 `ddl-auto=validate`. 급하면 Day 1만 `update`, Day 3 전 Flyway 전환.
 - **관리자 계정:** seed 방식. 서버 시작 시 `ADMIN_EMAIL` / `ADMIN_PASSWORD` 환경변수가 있으면 생성.
-- **즉시 카드 1장:** P0는 저장 API 안에서 동기 Mock Agent 호출 → 관심사/요약/카드/로그까지 즉시 저장. Kafka 비동기는 P1.
+- **~~즉시 카드 1장~~ → 폐기 예정 (2026-07-27 정정):** "저장 시 동기 즉시 카드"는 P0 관통용이었고, 제품 모델은
+  **저장 ≠ 생성**으로 확정됐다. 기존 동기 Mock 경로는 **제거하지 말고 `app.agent.immediate-card.enabled` 플래그로 격리** —
+  비동기 경로(생성 트리거→claim 적재)가 배포 환경에서 실제 카드를 만드는 걸 확인한 뒤 OFF 한다(데모 안전장치).
 - **reference CRUD 템플릿:** `Note` 엔티티로 Controller/Service/Repository/DTO/공통응답/예외/권한 1세트 제공(팀원 복붙 시작점).
 - **API 경로:** `/api/...` 접두사 (예: `/api/auth/login`, `/api/bookmarks`). 관리자 API는 `/api/admin/...`.
 - **DB 네이밍:** 테이블·컬럼 `snake_case`, schema 접두사(`service.` / `agent.`) 명시.
 - **Git:** `main`(배포) · `develop`(통합) · `feature/*`. PR로만 머지. 서브모듈은 하위 레포 먼저 push → build 레포 포인터 갱신.
+
+---
+
+## 정보구조 (2026-07-27 확정)
+
+사용자 웹 좌측 내비는 아래 5개가 전부다. **"지식창고" 화면은 삭제** — 홈 [내 보고서]와 데이터가 동일했다
+(필터는 홈 탭 상단으로, 검색은 글로벌 검색바로, 관심사별 모아보기는 관심사 화면으로 흡수).
+
+| 메뉴 | 내용 | 시점 |
+|---|---|---|
+| 홈 | [내 보고서](기본 탭, 실데이터) + [피드](공개, SNS) | Week2 |
+| 북마크 | **남의 공개 보고서** 스크랩 (구 "보관함") | Week3 — 공개 전환 API 이후 |
+| 관심사 · LLM Wiki | 상단 = AI가 이해한 관심사(카테고리·점수·신뢰도·근거) / 하단 = 내가 저장한 자료(AI 요약·주제 태그). 관심사 클릭 → 근거 자료 필터 | Week2 |
+| 프로필 | SNS 공개 프로필 | Week3 |
+| 설정 | | — |
+
+- 스토리 = **저장한다(관심사 화면 하단) → AI가 이해한다(상단) → 매일 받는다(홈)**.
+- Week2 동안 북마크·프로필은 **내비에서 숨김**(빈 화면 노출 금지). Week3에 켠다.
+- ⚠️ 용어: 백엔드 `bookmarks` 테이블/API = **내가 저장한 관심 자료**다. UI "북마크" 메뉴(=스크랩)와 다르다.
+  스크랩 백엔드는 `bookmarks` 재사용 금지, **별도 테이블**로 만든다.
+- ⚠️ UI에 "트리거"·"조회수" 노출 금지 — 백엔드에 없는 개념이다(관심사·score만 존재).
 
 ---
 
