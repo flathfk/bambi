@@ -1,5 +1,5 @@
 // 밤새비서 클리퍼 — 툴바 아이콘 클릭 = 즉시 저장 (팝업 없음)
-const DEFAULT_API = "https://our-faster-psychiatry-officer.trycloudflare.com";
+const DEFAULT_API = "http://34.64.53.250";
 
 async function getCfg() {
   const { bc_api, bc_tok } = await chrome.storage.local.get(["bc_api", "bc_tok"]);
@@ -32,12 +32,13 @@ async function saveTab(tab) {
     const [{ result }] = await chrome.scripting.executeScript({
       target: { tabId: tab.id }, func: extract,
     });
+    // bookmarks 계약: {url, title, content} — url은 본문에 섞지 않고 필드로 분리
     const body = {
-      title: result.title || result.url,
-      content: result.url + "\n\n" + result.content,
+      url: result.url,
+      title: (result.title || result.url).slice(0, 500),
+      content: result.content,
     };
-    // ⬇️ 영현 /api/bookmarks 나오면 여기 엔드포인트만 교체 (지금은 note로 저장)
-    const r = await fetch(api + "/api/notes", {
+    const r = await fetch(api + "/api/bookmarks", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: "Bearer " + tok },
       body: JSON.stringify(body),

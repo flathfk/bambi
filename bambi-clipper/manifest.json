@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "밤새비서 클리퍼",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "보고 있는 웹페이지를 아이콘 클릭 한 번에 밤새비서에 저장합니다.",
   "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": [

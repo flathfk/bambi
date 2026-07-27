@@ -1,6 +1,6 @@
 // 밤새비서 클리퍼 설정 — 로그인 / API 주소 (chrome.storage.local 사용)
 const $ = (id) => document.getElementById(id);
-const DEFAULT_API = "https://our-faster-psychiatry-officer.trycloudflare.com";
+const DEFAULT_API = "http://34.64.53.250";
 const msg = (t, k) => { const m = $("msg"); m.textContent = t; m.className = k || ""; };
 
 async function load() {
