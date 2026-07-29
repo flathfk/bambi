@@ -1,0 +1,45 @@
+﻿카테고리ID,카테고리,카테고리(EN),아이콘,토픽ID,토픽,토픽(EN),설명,예시 키워드
+tech,테크·IT,Tech & IT,💻,ai_ml,AI·머신러닝,AI & Machine Learning,"생성형 AI, LLM, 모델 연구와 활용 사례",생성형 AI | LLM | 머신러닝 | AI 에이전트 | OpenAI | Anthropic
+tech,테크·IT,Tech & IT,💻,programming,개발·프로그래밍,Software Development,"언어·프레임워크·오픈소스, 개발자 이야기",오픈소스 | 프레임워크 | 리팩터링 | 개발자 | GitHub | programming
+tech,테크·IT,Tech & IT,💻,data_cloud,데이터·클라우드,Data & Cloud,"데이터 엔지니어링, 인프라, 클라우드 서비스",데이터 파이프라인 | 클라우드 | 쿠버네티스 | AWS | 데이터베이스 | DevOps
+tech,테크·IT,Tech & IT,💻,security,보안·프라이버시,Security & Privacy,"해킹 사고, 취약점, 개인정보 보호",해킹 | 취약점 | 개인정보 유출 | 랜섬웨어 | 보안 패치 | cybersecurity
+tech,테크·IT,Tech & IT,💻,gadget,가젯·디바이스,Gadgets & Devices,"스마트폰, 노트북, 웨어러블 신제품과 리뷰",스마트폰 | 노트북 | 웨어러블 | 신제품 리뷰 | 애플 | 갤럭시
+tech,테크·IT,Tech & IT,💻,mobility,자동차·모빌리티,Cars & Mobility,"전기차, 자율주행, 이동 수단의 변화",전기차 | 자율주행 | 배터리 | 모빌리티 | 테슬라 | EV
+business,비즈니스·경제,Business & Economy,📊,startup,스타트업·창업,Startups,"창업 사례, 투자 유치, 팀 빌딩",스타트업 | 시리즈 A | 투자 유치 | 창업 | VC | 액셀러레이터
+business,비즈니스·경제,Business & Economy,📊,invest,투자·재테크,Investing,주식·코인·연금 등 개인 자산 운용,주식 | ETF | 가상자산 | 연금 | 배당 | 포트폴리오
+business,비즈니스·경제,Business & Economy,📊,economy,경제·금융,Economy & Finance,"금리, 환율, 물가 같은 거시 경제 흐름",금리 | 환율 | 물가 | 경기 전망 | 중앙은행 | 인플레이션
+business,비즈니스·경제,Business & Economy,📊,industry,산업·기업,Industry & Companies,빅테크와 주요 산업의 전략과 실적,실적 발표 | 빅테크 | 반도체 | 인수합병 | 산업 동향 | 공급망
+business,비즈니스·경제,Business & Economy,📊,marketing,마케팅·브랜드,Marketing & Brand,"캠페인, 브랜딩, 소비자 트렌드",마케팅 | 브랜딩 | 광고 캠페인 | 소비 트렌드 | 그로스 | 리테일
+business,비즈니스·경제,Business & Economy,📊,realestate,부동산,Real Estate,"집값, 청약, 임대차 정책",부동산 | 집값 | 청약 | 전세 | 재건축 | 주택 정책
+career,커리어·자기계발,Career & Growth,🚀,job,커리어·이직,Career & Job Change,"채용 시장, 이직 준비, 연봉 협상",이직 | 채용 | 면접 | 연봉 협상 | 커리어 | 포트폴리오
+career,커리어·자기계발,Career & Growth,🚀,productivity,생산성·업무도구,Productivity & Tools,"일하는 방법, 노션·AI 도구 활용",생산성 | 업무 자동화 | 노션 | AI 도구 | 워크플로 | 시간 관리
+career,커리어·자기계발,Career & Growth,🚀,study,공부·학습법,Learning,"외국어, 자격증, 효율적인 공부 방법",공부법 | 영어 학습 | 자격증 | 온라인 강의 | 복습 | 학습 습관
+career,커리어·자기계발,Career & Growth,🚀,writing,글쓰기·기록,Writing & Note-taking,"글쓰기, 메모, 지식 정리",글쓰기 | 메모 | 지식 관리 | 제텔카스텐 | 뉴스레터 | 옵시디언
+career,커리어·자기계발,Career & Growth,🚀,leadership,리더십·조직문화,Leadership & Culture,"매니징, 협업, 일하는 문화",리더십 | 조직문화 | 매니징 | 원온원 | 협업 | 재택근무
+science,과학·환경,Science & Environment,🔬,space,우주·천문,Space & Astronomy,"우주 탐사, 발사체, 천문 발견",우주 | 천문 | 위성 | 화성 | NASA | 스페이스X
+science,과학·환경,Science & Environment,🔬,bio,생명과학·의학,Life Science & Medicine,"유전자, 신약, 의학 연구",유전자 | 신약 | 임상시험 | 바이오 | 면역 | 생명공학
+science,과학·환경,Science & Environment,🔬,climate,기후·환경,Climate & Environment,"기후 변화, 에너지 전환, 생태계",기후 변화 | 탄소중립 | 재생에너지 | 생태계 | 미세먼지 | ESG
+science,과학·환경,Science & Environment,🔬,brain,뇌과학·심리,Neuroscience & Psychology,"인지, 감정, 행동에 대한 연구",뇌과학 | 심리학 | 인지 | 행동경제학 | 기억 | 의사결정
+science,과학·환경,Science & Environment,🔬,physics_math,물리·수학,Physics & Math,기초 과학 이론과 새로운 발견,물리학 | 수학 | 양자 | 입자물리 | 수학 난제 | 기초과학
+health,건강·웰빙,Health & Wellbeing,🌿,fitness,운동·피트니스,Fitness,"근력, 러닝, 홈트레이닝",운동 | 근력 운동 | 러닝 | 홈트레이닝 | 체지방 | 스트레칭
+health,건강·웰빙,Health & Wellbeing,🌿,nutrition,식단·영양,Nutrition & Diet,"먹는 것과 몸의 관계, 다이어트",식단 | 영양 | 다이어트 | 단백질 | 혈당 | 영양제
+health,건강·웰빙,Health & Wellbeing,🌿,mental,멘탈·스트레스,Mental Health,"번아웃, 불안, 마음 돌보기",번아웃 | 불안 | 명상 | 스트레스 관리 | 정신건강 | 마음챙김
+health,건강·웰빙,Health & Wellbeing,🌿,sleep,수면·회복,Sleep & Recovery,"잘 자는 법, 피로 회복 루틴",수면 | 불면 | 피로 회복 | 생활 리듬 | 낮잠 | 수면의 질
+health,건강·웰빙,Health & Wellbeing,🌿,medical,질환·의료정보,Medical Info,"질병 정보, 검진, 의료 제도",건강검진 | 질환 | 예방접종 | 의료 정책 | 약 | 병원
+society,시사·사회,News & Society,📰,korea,국내 이슈,Korea News,지금 한국에서 벌어지는 일,국내 뉴스 | 정치 | 사건 사고 | 지역 | 국회 | 행정
+society,시사·사회,News & Society,📰,world,국제 정세,World Affairs,"해외 뉴스, 외교와 분쟁",국제 정세 | 외교 | 분쟁 | 미중 관계 | 무역 | geopolitics
+society,시사·사회,News & Society,📰,policy,정책·제도,Policy & Regulation,새로 바뀌는 법과 제도,정책 | 규제 | 법 개정 | 제도 개편 | 세금 | AI 규제
+society,시사·사회,News & Society,📰,social,사회·노동,Society & Labor,"일자리, 인구, 불평등 같은 사회 문제",노동 | 일자리 | 인구 | 저출생 | 불평등 | 복지
+society,시사·사회,News & Society,📰,media,미디어·언론,Media & Journalism,"뉴스가 만들어지는 방식, 플랫폼 변화",언론 | 저널리즘 | 가짜뉴스 | 플랫폼 | 여론 | 팩트체크
+culture,문화·엔터,Culture & Entertainment,🎬,movie_drama,영화·드라마,Film & TV,"개봉작, 시리즈, OTT 화제작",영화 | 드라마 | 넷플릭스 | OTT | 개봉 | 시리즈
+culture,문화·엔터,Culture & Entertainment,🎬,music,음악,Music,"신보, 공연, 아티스트 소식",음악 | 신보 | 공연 | K-POP | 앨범 | 페스티벌
+culture,문화·엔터,Culture & Entertainment,🎬,book,책·문학,Books & Literature,"신간, 서평, 읽을거리",신간 | 서평 | 베스트셀러 | 문학 | 출판 | 독서
+culture,문화·엔터,Culture & Entertainment,🎬,game,게임,Games,"신작, 업데이트, 게임 산업",게임 | 신작 | e스포츠 | 스팀 | 콘솔 | 인디게임
+culture,문화·엔터,Culture & Entertainment,🎬,webtoon_anime,웹툰·애니,Webtoon & Anime,"연재작, 애니메이션, 원작 IP",웹툰 | 애니메이션 | 만화 | IP | 연재 | webtoon
+culture,문화·엔터,Culture & Entertainment,🎬,art_design,예술·디자인,Art & Design,"전시, 건축, 디자인 트렌드",전시 | 디자인 | 건축 | 미술 | 타이포그래피 | UX 디자인
+life,라이프·취미,Life & Hobbies,🌈,travel,여행,Travel,"여행지, 항공·숙소, 여행 팁",여행 | 항공권 | 숙소 | 여행지 | 해외여행 | 국내여행
+life,라이프·취미,Life & Hobbies,🌈,food,음식·요리,Food & Cooking,"레시피, 맛집, 식재료",요리 | 레시피 | 맛집 | 식재료 | 베이킹 | 커피
+life,라이프·취미,Life & Hobbies,🌈,sports,스포츠,Sports,"경기 결과, 리그, 선수 소식",스포츠 | 축구 | 야구 | 리그 | 선수 | 올림픽
+life,라이프·취미,Life & Hobbies,🌈,fashion_beauty,패션·뷰티,Fashion & Beauty,"스타일, 화장품, 시즌 트렌드",패션 | 뷰티 | 화장품 | 스타일링 | 트렌드 | 스킨케어
+life,라이프·취미,Life & Hobbies,🌈,home,홈·인테리어,Home & Interior,"집 꾸미기, 살림, 정리",인테리어 | 살림 | 정리수납 | 가구 | 홈데코 | 자취
+life,라이프·취미,Life & Hobbies,🌈,pet,반려동물,Pets,"반려동물 건강, 훈련, 용품",반려동물 | 강아지 | 고양이 | 펫 | 훈련 | 동물병원

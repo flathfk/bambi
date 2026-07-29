@@ -1,0 +1,454 @@
+{
+  "version": "1.0.0-draft",
+  "updated_at": "2026-07-29",
+  "locale": "ko-KR",
+  "description": "회원가입 온보딩에서 사용자가 고르는 관심 Category(대분류) - Topic(중분류) 분류 체계. INT-002 '서비스 분류 체계'의 후보 어휘이자, 수집 콘텐츠 매칭의 시드 키워드 출처.",
+  "selection_policy": {
+    "step_1": "category",
+    "step_2": "topic",
+    "min_categories": 1,
+    "max_categories": 8,
+    "min_topics": 3,
+    "max_topics": 12,
+    "skippable": true,
+    "note": "1단계에서 고른 Category의 Topic만 2단계에 노출한다. 최소/최대값은 잠정값 — 팀 확정 시 갱신."
+  },
+  "stats": {
+    "category_count": 8,
+    "topic_count": 44
+  },
+  "categories": [
+    {
+      "id": "tech",
+      "order": 1,
+      "name": "테크·IT",
+      "name_en": "Tech & IT",
+      "emoji": "💻",
+      "description": "새 기술과 서비스, 개발 현장 소식",
+      "topics": [
+        {
+          "id": "ai_ml",
+          "order": 1,
+          "name": "AI·머신러닝",
+          "name_en": "AI & Machine Learning",
+          "description": "생성형 AI, LLM, 모델 연구와 활용 사례",
+          "keywords": ["생성형 AI", "LLM", "머신러닝", "AI 에이전트", "OpenAI", "Anthropic"]
+        },
+        {
+          "id": "programming",
+          "order": 2,
+          "name": "개발·프로그래밍",
+          "name_en": "Software Development",
+          "description": "언어·프레임워크·오픈소스, 개발자 이야기",
+          "keywords": ["오픈소스", "프레임워크", "리팩터링", "개발자", "GitHub", "programming"]
+        },
+        {
+          "id": "data_cloud",
+          "order": 3,
+          "name": "데이터·클라우드",
+          "name_en": "Data & Cloud",
+          "description": "데이터 엔지니어링, 인프라, 클라우드 서비스",
+          "keywords": ["데이터 파이프라인", "클라우드", "쿠버네티스", "AWS", "데이터베이스", "DevOps"]
+        },
+        {
+          "id": "security",
+          "order": 4,
+          "name": "보안·프라이버시",
+          "name_en": "Security & Privacy",
+          "description": "해킹 사고, 취약점, 개인정보 보호",
+          "keywords": ["해킹", "취약점", "개인정보 유출", "랜섬웨어", "보안 패치", "cybersecurity"]
+        },
+        {
+          "id": "gadget",
+          "order": 5,
+          "name": "가젯·디바이스",
+          "name_en": "Gadgets & Devices",
+          "description": "스마트폰, 노트북, 웨어러블 신제품과 리뷰",
+          "keywords": ["스마트폰", "노트북", "웨어러블", "신제품 리뷰", "애플", "갤럭시"]
+        },
+        {
+          "id": "mobility",
+          "order": 6,
+          "name": "자동차·모빌리티",
+          "name_en": "Cars & Mobility",
+          "description": "전기차, 자율주행, 이동 수단의 변화",
+          "keywords": ["전기차", "자율주행", "배터리", "모빌리티", "테슬라", "EV"]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "order": 2,
+      "name": "비즈니스·경제",
+      "name_en": "Business & Economy",
+      "emoji": "📊",
+      "description": "시장과 기업, 돈의 흐름",
+      "topics": [
+        {
+          "id": "startup",
+          "order": 1,
+          "name": "스타트업·창업",
+          "name_en": "Startups",
+          "description": "창업 사례, 투자 유치, 팀 빌딩",
+          "keywords": ["스타트업", "시리즈 A", "투자 유치", "창업", "VC", "액셀러레이터"]
+        },
+        {
+          "id": "invest",
+          "order": 2,
+          "name": "투자·재테크",
+          "name_en": "Investing",
+          "description": "주식·코인·연금 등 개인 자산 운용",
+          "keywords": ["주식", "ETF", "가상자산", "연금", "배당", "포트폴리오"]
+        },
+        {
+          "id": "economy",
+          "order": 3,
+          "name": "경제·금융",
+          "name_en": "Economy & Finance",
+          "description": "금리, 환율, 물가 같은 거시 경제 흐름",
+          "keywords": ["금리", "환율", "물가", "경기 전망", "중앙은행", "인플레이션"]
+        },
+        {
+          "id": "industry",
+          "order": 4,
+          "name": "산업·기업",
+          "name_en": "Industry & Companies",
+          "description": "빅테크와 주요 산업의 전략과 실적",
+          "keywords": ["실적 발표", "빅테크", "반도체", "인수합병", "산업 동향", "공급망"]
+        },
+        {
+          "id": "marketing",
+          "order": 5,
+          "name": "마케팅·브랜드",
+          "name_en": "Marketing & Brand",
+          "description": "캠페인, 브랜딩, 소비자 트렌드",
+          "keywords": ["마케팅", "브랜딩", "광고 캠페인", "소비 트렌드", "그로스", "리테일"]
+        },
+        {
+          "id": "realestate",
+          "order": 6,
+          "name": "부동산",
+          "name_en": "Real Estate",
+          "description": "집값, 청약, 임대차 정책",
+          "keywords": ["부동산", "집값", "청약", "전세", "재건축", "주택 정책"]
+        }
+      ]
+    },
+    {
+      "id": "career",
+      "order": 3,
+      "name": "커리어·자기계발",
+      "name_en": "Career & Growth",
+      "emoji": "🚀",
+      "description": "일하는 방식과 성장",
+      "topics": [
+        {
+          "id": "job",
+          "order": 1,
+          "name": "커리어·이직",
+          "name_en": "Career & Job Change",
+          "description": "채용 시장, 이직 준비, 연봉 협상",
+          "keywords": ["이직", "채용", "면접", "연봉 협상", "커리어", "포트폴리오"]
+        },
+        {
+          "id": "productivity",
+          "order": 2,
+          "name": "생산성·업무도구",
+          "name_en": "Productivity & Tools",
+          "description": "일하는 방법, 노션·AI 도구 활용",
+          "keywords": ["생산성", "업무 자동화", "노션", "AI 도구", "워크플로", "시간 관리"]
+        },
+        {
+          "id": "study",
+          "order": 3,
+          "name": "공부·학습법",
+          "name_en": "Learning",
+          "description": "외국어, 자격증, 효율적인 공부 방법",
+          "keywords": ["공부법", "영어 학습", "자격증", "온라인 강의", "복습", "학습 습관"]
+        },
+        {
+          "id": "writing",
+          "order": 4,
+          "name": "글쓰기·기록",
+          "name_en": "Writing & Note-taking",
+          "description": "글쓰기, 메모, 지식 정리",
+          "keywords": ["글쓰기", "메모", "지식 관리", "제텔카스텐", "뉴스레터", "옵시디언"]
+        },
+        {
+          "id": "leadership",
+          "order": 5,
+          "name": "리더십·조직문화",
+          "name_en": "Leadership & Culture",
+          "description": "매니징, 협업, 일하는 문화",
+          "keywords": ["리더십", "조직문화", "매니징", "원온원", "협업", "재택근무"]
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "order": 4,
+      "name": "과학·환경",
+      "name_en": "Science & Environment",
+      "emoji": "🔬",
+      "description": "연구 성과와 지구·우주 이야기",
+      "topics": [
+        {
+          "id": "space",
+          "order": 1,
+          "name": "우주·천문",
+          "name_en": "Space & Astronomy",
+          "description": "우주 탐사, 발사체, 천문 발견",
+          "keywords": ["우주", "천문", "위성", "화성", "NASA", "스페이스X"]
+        },
+        {
+          "id": "bio",
+          "order": 2,
+          "name": "생명과학·의학",
+          "name_en": "Life Science & Medicine",
+          "description": "유전자, 신약, 의학 연구",
+          "keywords": ["유전자", "신약", "임상시험", "바이오", "면역", "생명공학"]
+        },
+        {
+          "id": "climate",
+          "order": 3,
+          "name": "기후·환경",
+          "name_en": "Climate & Environment",
+          "description": "기후 변화, 에너지 전환, 생태계",
+          "keywords": ["기후 변화", "탄소중립", "재생에너지", "생태계", "미세먼지", "ESG"]
+        },
+        {
+          "id": "brain",
+          "order": 4,
+          "name": "뇌과학·심리",
+          "name_en": "Neuroscience & Psychology",
+          "description": "인지, 감정, 행동에 대한 연구",
+          "keywords": ["뇌과학", "심리학", "인지", "행동경제학", "기억", "의사결정"]
+        },
+        {
+          "id": "physics_math",
+          "order": 5,
+          "name": "물리·수학",
+          "name_en": "Physics & Math",
+          "description": "기초 과학 이론과 새로운 발견",
+          "keywords": ["물리학", "수학", "양자", "입자물리", "수학 난제", "기초과학"]
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "order": 5,
+      "name": "건강·웰빙",
+      "name_en": "Health & Wellbeing",
+      "emoji": "🌿",
+      "description": "몸과 마음을 관리하는 법",
+      "topics": [
+        {
+          "id": "fitness",
+          "order": 1,
+          "name": "운동·피트니스",
+          "name_en": "Fitness",
+          "description": "근력, 러닝, 홈트레이닝",
+          "keywords": ["운동", "근력 운동", "러닝", "홈트레이닝", "체지방", "스트레칭"]
+        },
+        {
+          "id": "nutrition",
+          "order": 2,
+          "name": "식단·영양",
+          "name_en": "Nutrition & Diet",
+          "description": "먹는 것과 몸의 관계, 다이어트",
+          "keywords": ["식단", "영양", "다이어트", "단백질", "혈당", "영양제"]
+        },
+        {
+          "id": "mental",
+          "order": 3,
+          "name": "멘탈·스트레스",
+          "name_en": "Mental Health",
+          "description": "번아웃, 불안, 마음 돌보기",
+          "keywords": ["번아웃", "불안", "명상", "스트레스 관리", "정신건강", "마음챙김"]
+        },
+        {
+          "id": "sleep",
+          "order": 4,
+          "name": "수면·회복",
+          "name_en": "Sleep & Recovery",
+          "description": "잘 자는 법, 피로 회복 루틴",
+          "keywords": ["수면", "불면", "피로 회복", "생활 리듬", "낮잠", "수면의 질"]
+        },
+        {
+          "id": "medical",
+          "order": 5,
+          "name": "질환·의료정보",
+          "name_en": "Medical Info",
+          "description": "질병 정보, 검진, 의료 제도",
+          "keywords": ["건강검진", "질환", "예방접종", "의료 정책", "약", "병원"]
+        }
+      ]
+    },
+    {
+      "id": "society",
+      "order": 6,
+      "name": "시사·사회",
+      "name_en": "News & Society",
+      "emoji": "📰",
+      "description": "지금 벌어지는 일들",
+      "topics": [
+        {
+          "id": "korea",
+          "order": 1,
+          "name": "국내 이슈",
+          "name_en": "Korea News",
+          "description": "지금 한국에서 벌어지는 일",
+          "keywords": ["국내 뉴스", "정치", "사건 사고", "지역", "국회", "행정"]
+        },
+        {
+          "id": "world",
+          "order": 2,
+          "name": "국제 정세",
+          "name_en": "World Affairs",
+          "description": "해외 뉴스, 외교와 분쟁",
+          "keywords": ["국제 정세", "외교", "분쟁", "미중 관계", "무역", "geopolitics"]
+        },
+        {
+          "id": "policy",
+          "order": 3,
+          "name": "정책·제도",
+          "name_en": "Policy & Regulation",
+          "description": "새로 바뀌는 법과 제도",
+          "keywords": ["정책", "규제", "법 개정", "제도 개편", "세금", "AI 규제"]
+        },
+        {
+          "id": "social",
+          "order": 4,
+          "name": "사회·노동",
+          "name_en": "Society & Labor",
+          "description": "일자리, 인구, 불평등 같은 사회 문제",
+          "keywords": ["노동", "일자리", "인구", "저출생", "불평등", "복지"]
+        },
+        {
+          "id": "media",
+          "order": 5,
+          "name": "미디어·언론",
+          "name_en": "Media & Journalism",
+          "description": "뉴스가 만들어지는 방식, 플랫폼 변화",
+          "keywords": ["언론", "저널리즘", "가짜뉴스", "플랫폼", "여론", "팩트체크"]
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "order": 7,
+      "name": "문화·엔터",
+      "name_en": "Culture & Entertainment",
+      "emoji": "🎬",
+      "description": "보고 듣고 읽는 것들",
+      "topics": [
+        {
+          "id": "movie_drama",
+          "order": 1,
+          "name": "영화·드라마",
+          "name_en": "Film & TV",
+          "description": "개봉작, 시리즈, OTT 화제작",
+          "keywords": ["영화", "드라마", "넷플릭스", "OTT", "개봉", "시리즈"]
+        },
+        {
+          "id": "music",
+          "order": 2,
+          "name": "음악",
+          "name_en": "Music",
+          "description": "신보, 공연, 아티스트 소식",
+          "keywords": ["음악", "신보", "공연", "K-POP", "앨범", "페스티벌"]
+        },
+        {
+          "id": "book",
+          "order": 3,
+          "name": "책·문학",
+          "name_en": "Books & Literature",
+          "description": "신간, 서평, 읽을거리",
+          "keywords": ["신간", "서평", "베스트셀러", "문학", "출판", "독서"]
+        },
+        {
+          "id": "game",
+          "order": 4,
+          "name": "게임",
+          "name_en": "Games",
+          "description": "신작, 업데이트, 게임 산업",
+          "keywords": ["게임", "신작", "e스포츠", "스팀", "콘솔", "인디게임"]
+        },
+        {
+          "id": "webtoon_anime",
+          "order": 5,
+          "name": "웹툰·애니",
+          "name_en": "Webtoon & Anime",
+          "description": "연재작, 애니메이션, 원작 IP",
+          "keywords": ["웹툰", "애니메이션", "만화", "IP", "연재", "webtoon"]
+        },
+        {
+          "id": "art_design",
+          "order": 6,
+          "name": "예술·디자인",
+          "name_en": "Art & Design",
+          "description": "전시, 건축, 디자인 트렌드",
+          "keywords": ["전시", "디자인", "건축", "미술", "타이포그래피", "UX 디자인"]
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "order": 8,
+      "name": "라이프·취미",
+      "name_en": "Life & Hobbies",
+      "emoji": "🌈",
+      "description": "일상을 채우는 관심사",
+      "topics": [
+        {
+          "id": "travel",
+          "order": 1,
+          "name": "여행",
+          "name_en": "Travel",
+          "description": "여행지, 항공·숙소, 여행 팁",
+          "keywords": ["여행", "항공권", "숙소", "여행지", "해외여행", "국내여행"]
+        },
+        {
+          "id": "food",
+          "order": 2,
+          "name": "음식·요리",
+          "name_en": "Food & Cooking",
+          "description": "레시피, 맛집, 식재료",
+          "keywords": ["요리", "레시피", "맛집", "식재료", "베이킹", "커피"]
+        },
+        {
+          "id": "sports",
+          "order": 3,
+          "name": "스포츠",
+          "name_en": "Sports",
+          "description": "경기 결과, 리그, 선수 소식",
+          "keywords": ["스포츠", "축구", "야구", "리그", "선수", "올림픽"]
+        },
+        {
+          "id": "fashion_beauty",
+          "order": 4,
+          "name": "패션·뷰티",
+          "name_en": "Fashion & Beauty",
+          "description": "스타일, 화장품, 시즌 트렌드",
+          "keywords": ["패션", "뷰티", "화장품", "스타일링", "트렌드", "스킨케어"]
+        },
+        {
+          "id": "home",
+          "order": 5,
+          "name": "홈·인테리어",
+          "name_en": "Home & Interior",
+          "description": "집 꾸미기, 살림, 정리",
+          "keywords": ["인테리어", "살림", "정리수납", "가구", "홈데코", "자취"]
+        },
+        {
+          "id": "pet",
+          "order": 6,
+          "name": "반려동물",
+          "name_en": "Pets",
+          "description": "반려동물 건강, 훈련, 용품",
+          "keywords": ["반려동물", "강아지", "고양이", "펫", "훈련", "동물병원"]
+        }
+      ]
+    }
+  ]
+}
