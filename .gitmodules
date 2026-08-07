@@ -10,6 +10,10 @@
 	path = bambi-build
 	url = https://github.com/hk-toss-final-project/bambi-build.git
 
+[submodule "bambi-clipper"]
+	path = bambi-clipper
+	url = https://github.com/hk-toss-final-project/bambi-clipper.git
+
 [submodule "bambi-service-api"]
 	path = bambi-service-api
 	url = https://github.com/hk-toss-final-project/bambi-service-api.git
