@@ -24,3 +24,7 @@
 [submodule "clipping-data"]
 	path = clipping-data
 	url = https://github.com/hk-toss-final-project/clipping-data.git
+
+[submodule "loadtest"]
+	path = loadtest
+	url = https://github.com/hk-toss-final-project/loadtest.git
