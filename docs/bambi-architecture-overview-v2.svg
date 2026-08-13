@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .bg { fill:#f4f6f2; }
+      .panel { fill:#ffffff; stroke:#cad2cc; stroke-width:2; }
+      .layer { fill:#fbfcfa; stroke:#cbd3cd; stroke-width:2; }
+      .box { fill:#fff8ee; stroke:#d7a566; stroke-width:2; }
+      .box2 { fill:#f7faf8; stroke:#9baaa2; stroke-width:2; }
+      .dark { fill:#173237; }
+      .orange { fill:#b86527; }
+      .muted { fill:#697a78; }
+      .title { font:700 52px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#173237; }
+      .subtitle { font:400 22px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#697a78; }
+      .section { font:700 25px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#173237; }
+      .label { font:700 20px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#173237; }
+      .body { font:400 17px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#435654; }
+      .small { font:400 14px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#617270; }
+      .mono { font:500 15px Consolas,'Malgun Gothic',monospace; fill:#304441; }
+      .badge { fill:#f6e5cc; stroke:#dfba87; stroke-width:1.5; }
+      .badgeText { font:700 16px 'Malgun Gothic','Noto Sans KR',sans-serif; fill:#8b4c1f; }
+      .arrow { fill:none; stroke:#71837f; stroke-width:2.2; marker-end:url(#arrow); }
+      .sync { fill:none; stroke:#2e6268; stroke-width:5; marker-end:url(#arrowSync); }
+      .pull { fill:none; stroke:#8c7160; stroke-width:3; stroke-dasharray:10 8; marker-end:url(#arrowPull); }
+      .internal { fill:none; stroke:#a6b1ac; stroke-width:2; stroke-dasharray:4 6; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#71837f"/></marker>
+    <marker id="arrowSync" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2e6268"/></marker>
+    <marker id="arrowPull" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#8c7160"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1d302c" flood-opacity=".10"/></filter>
+  </defs>
+
+  <rect class="bg" width="1920" height="1080"/>
+
+  <!-- Header -->
+  <rect x="74" y="42" width="610" height="38" rx="4" class="badge"/>
+  <text x="94" y="67" class="badgeText">HK-TOSS-FINAL-PROJECT / BAMBI · FULL STACK + AI AGENT</text>
+  <text x="74" y="140" class="title">전체 시스템 아키텍처</text>
+  <text x="76" y="181" class="subtitle">상위 저장소 1개와 서브모듈 6개가 Service → Agent 단방향 호출 경계로 연결됩니다.</text>
+
+  <g transform="translate(1205 56)">
+    <rect width="185" height="42" rx="21" class="badge"/><text x="92" y="27" text-anchor="middle" class="badgeText">서브모듈 6개</text>
+    <rect x="200" width="175" height="42" rx="21" class="badge"/><text x="287" y="27" text-anchor="middle" class="badgeText">LangGraph 8개</text>
+    <rect x="390" width="250" height="42" rx="21" class="badge"/><text x="515" y="27" text-anchor="middle" class="badgeText">상주 Worker 5종 · 26개</text>
+  </g>
+
+  <rect x="74" y="211" width="1772" height="62" rx="10" fill="#f7e7cf" stroke="#dfbb89" stroke-width="2"/>
+  <text x="100" y="250" class="label" fill="#71451f">핵심 불변식</text>
+  <text x="255" y="250" class="body">프론트엔드 → Service API → Agent API. Agent는 service-db를 직접 수정하지 않으며, 완성물은 Service Worker가 Pull하여 저장합니다.</text>
+
+  <!-- Main panel -->
+  <rect x="74" y="300" width="1772" height="620" rx="14" class="panel" filter="url(#shadow)"/>
+  <text x="100" y="337" class="small">GCP VM · Docker Compose · 컨테이너 내부망</text>
+
+  <!-- Entry routes are painted first so node cards remain visually clean. -->
+  <path d="M311 401 H1025" class="arrow"/>
+  <path d="M510 401 H1025" class="arrow"/>
+  <path d="M709 401 H1025" class="arrow"/>
+  <path d="M965 401 H1025" class="arrow"/>
+
+  <!-- Entry points -->
+  <g>
+    <rect x="106" y="365" width="205" height="72" rx="8" class="box2"/>
+    <text x="208" y="394" text-anchor="middle" class="label">bambi-clipper</text>
+    <text x="208" y="419" text-anchor="middle" class="small">Chrome 확장 · Manifest V3</text>
+
+    <rect x="335" y="365" width="175" height="72" rx="8" class="box2"/>
+    <text x="422" y="394" text-anchor="middle" class="label">사용자</text>
+    <text x="422" y="419" text-anchor="middle" class="small">웹 브라우저</text>
+
+    <rect x="534" y="365" width="175" height="72" rx="8" class="box2"/>
+    <text x="621" y="394" text-anchor="middle" class="label">관리자</text>
+    <text x="621" y="419" text-anchor="middle" class="small">웹 브라우저</text>
+
+    <rect x="735" y="365" width="230" height="72" rx="8" class="box2"/>
+    <text x="850" y="394" text-anchor="middle" class="label">외부 MCP 클라이언트</text>
+    <text x="850" y="419" text-anchor="middle" class="small">Claude · ChatGPT · Codex</text>
+
+    <rect x="1040" y="365" width="310" height="72" rx="8" class="box"/>
+    <text x="1195" y="394" text-anchor="middle" class="label">Nginx 리버스 프록시</text>
+    <text x="1195" y="419" text-anchor="middle" class="small">HTTPS · / · /admin · /api · /mcp</text>
+  </g>
+
+  <!-- Service layer -->
+  <rect x="104" y="475" width="810" height="410" rx="12" class="layer"/>
+  <text x="130" y="510" class="section">SERVICE LAYER · Spring Boot</text>
+
+  <rect x="132" y="535" width="205" height="76" rx="8" class="box"/>
+  <text x="234" y="565" text-anchor="middle" class="label">service-web :3000</text>
+  <text x="234" y="590" text-anchor="middle" class="small">Next.js · 사용자 화면</text>
+
+  <rect x="360" y="535" width="205" height="76" rx="8" class="box"/>
+  <text x="462" y="565" text-anchor="middle" class="label">admin-web :3000</text>
+  <text x="462" y="590" text-anchor="middle" class="small">Next.js · 관리자 화면</text>
+
+  <rect x="590" y="535" width="290" height="76" rx="8" class="box"/>
+  <text x="735" y="565" text-anchor="middle" class="label">backend :8080</text>
+  <text x="735" y="590" text-anchor="middle" class="small">인증 · 인가 · Agent Gateway</text>
+
+  <rect x="132" y="652" width="250" height="82" rx="8" class="box2"/>
+  <text x="257" y="681" text-anchor="middle" class="label">Service Scheduler</text>
+  <text x="257" y="706" text-anchor="middle" class="small">03시 준비 · 05시 생성 · 07시 공개</text>
+
+  <rect x="406" y="652" width="252" height="82" rx="8" class="box2"/>
+  <text x="532" y="681" text-anchor="middle" class="label">Service Worker</text>
+  <text x="532" y="706" text-anchor="middle" class="small">Outbox · 상태 동기화 · Publish</text>
+
+  <g transform="translate(690 658)">
+    <ellipse cx="88" cy="17" rx="88" ry="17" fill="#fff4e5" stroke="#d7a566" stroke-width="2"/>
+    <path d="M0 17 V65 C0 88 176 88 176 65 V17" fill="#fff8ee" stroke="#d7a566" stroke-width="2"/>
+    <ellipse cx="88" cy="65" rx="88" ry="17" fill="#fff8ee" stroke="#d7a566" stroke-width="2"/>
+    <text x="88" y="45" text-anchor="middle" class="label">service-db</text>
+    <text x="88" y="64" text-anchor="middle" style="font:400 12px 'Malgun Gothic',sans-serif;fill:#617270">PostgreSQL · Source of Truth</text>
+  </g>
+
+  <path d="M234 611 V630 H705 Q735 630 735 611" class="arrow"/>
+  <path d="M462 611 V622 H705 Q725 622 725 611" class="arrow"/>
+  <path d="M735 611 V645" class="arrow"/>
+  <path d="M658 693 H680" class="arrow"/>
+  <path d="M735 611 C735 630 778 630 778 648" class="arrow"/>
+
+  <!-- Agent layer -->
+  <rect x="950" y="475" width="866" height="410" rx="12" class="layer"/>
+  <text x="976" y="510" class="section">AGENT LAYER · FastAPI + LangGraph</text>
+
+  <rect x="978" y="535" width="220" height="76" rx="8" class="box"/>
+  <text x="1088" y="565" text-anchor="middle" class="label">mcp-server :8100</text>
+  <text x="1088" y="590" text-anchor="middle" class="small">같은 이미지 · 별도 프로세스</text>
+
+  <rect x="1222" y="535" width="250" height="76" rx="8" class="box"/>
+  <text x="1347" y="565" text-anchor="middle" class="label">agent-api :8000</text>
+  <text x="1347" y="590" text-anchor="middle" class="small">내부 API · LangGraph 8개</text>
+
+  <rect x="1496" y="535" width="292" height="164" rx="10" class="box"/>
+  <text x="1642" y="566" text-anchor="middle" class="label">상주 Worker 5종 · 26개</text>
+  <text x="1518" y="600" class="body">Wiki 6</text><text x="1645" y="600" class="body">Report 10</text>
+  <text x="1518" y="628" class="body">Briefing 8</text><text x="1645" y="628" class="body">URL 수집 1</text>
+  <text x="1518" y="656" class="body">Global-content 1</text>
+  <rect x="1518" y="670" width="245" height="22" rx="11" class="badge"/>
+  <text x="1640" y="686" text-anchor="middle" class="small">AI 작업 24 + 수집 2</text>
+
+  <g transform="translate(1000 708)">
+    <ellipse cx="105" cy="17" rx="105" ry="17" fill="#f1f6f3" stroke="#91a39b" stroke-width="2"/>
+    <path d="M0 17 V68 C0 92 210 92 210 68 V17" fill="#f7faf8" stroke="#91a39b" stroke-width="2"/>
+    <ellipse cx="105" cy="68" rx="105" ry="17" fill="#f7faf8" stroke="#91a39b" stroke-width="2"/>
+    <text x="105" y="45" text-anchor="middle" class="label">agent-db + pgvector</text>
+    <text x="105" y="65" text-anchor="middle" style="font:400 12px 'Malgun Gothic',sans-serif;fill:#617270">Wiki · 관심사 · 검색 · 생성 상태</text>
+  </g>
+
+  <rect x="1252" y="727" width="536" height="105" rx="9" class="box2"/>
+  <text x="1275" y="757" class="label">외부 API</text>
+  <text x="1275" y="788" class="body">OpenAI LLM · Tavily · Naver · GDELT · NewsAPI</text>
+  <text x="1275" y="815" class="body">Jina · YouTube · Reddit</text>
+
+  <path d="M1195 437 C1195 470 1088 470 1088 525" class="arrow"/>
+  <path d="M1195 437 C1195 465 735 465 735 525" class="arrow"/>
+  <path d="M1198 573 H1212" class="internal"/>
+  <path d="M1347 611 C1347 677 1110 650 1110 698" class="arrow"/>
+  <path d="M1496 616 C1415 616 1415 690 1210 740" class="arrow"/>
+  <path d="M1642 699 V717" class="arrow"/>
+
+  <!-- Cross-boundary calls: arrowheads always point into Agent -->
+  <path d="M880 565 C915 565 925 630 970 630 H1170 Q1212 630 1212 588" class="sync"/>
+  <rect x="924" y="614" width="230" height="28" rx="14" fill="#f4f6f2"/>
+  <text x="1039" y="634" text-anchor="middle" class="small">동기 HTTP · Bearer Token</text>
+
+  <path d="M658 690 H930 Q958 690 958 662 H1175 Q1205 662 1212 610" class="pull"/>
+  <rect x="786" y="676" width="250" height="28" rx="14" fill="#f4f6f2"/>
+  <text x="911" y="696" text-anchor="middle" class="small">Pull 폴링 · Claim / ACK</text>
+
+  <rect x="995" y="847" width="777" height="25" rx="12" fill="#e9efeb"/>
+  <text x="1383" y="865" text-anchor="middle" class="small">Agent → Service 직접 호출 없음 · Agent는 service-db 접속 정보 없음</text>
+
+  <!-- Legend -->
+  <g transform="translate(106 944)">
+    <line x1="0" y1="13" x2="75" y2="13" class="sync"/><text x="90" y="19" class="body">Service → Agent 핵심 동기 호출</text>
+    <line x1="430" y1="13" x2="505" y2="13" class="arrow"/><text x="520" y="19" class="body">일반 요청 · 저장</text>
+    <line x1="725" y1="13" x2="800" y2="13" class="pull"/><text x="815" y="19" class="body">Pull 폴링 · 프로세스 내부 호출</text>
+  </g>
+
+  <!-- Repository strip -->
+  <line x1="74" y1="995" x2="1846" y2="995" stroke="#cbd3cd" stroke-width="2"/>
+  <text x="74" y="1030" class="section">저장소 구성</text>
+  <text x="238" y="1028" class="label" fill="#8b4c1f">상위 bambi 1개</text>
+  <text x="410" y="1028" class="body">+</text>
+  <g class="mono">
+    <text x="445" y="1028">service-web</text><text x="585" y="1028">admin-web</text><text x="710" y="1028">clipper</text>
+    <text x="805" y="1028">service-api</text><text x="950" y="1028">agent-api</text><text x="1068" y="1028">build</text>
+  </g>
+  <text x="1218" y="1028" class="small">서브모듈 6개 · admin-web은 로컬 개발 3001 / 컨테이너 3000</text>
+  <text x="74" y="1064" class="small">기준: 현재 main 및 운영 컨테이너 구성 · 외부 공개 주소와 비밀값은 표시하지 않음</text>
+</svg>
