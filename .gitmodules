@@ -21,3 +21,6 @@
 [submodule "bambi-service-web"]
 	path = bambi-service-web
 	url = https://github.com/hk-toss-final-project/bambi-service-web.git
+[submodule "clipping-data"]
+	path = clipping-data
+	url = https://github.com/hk-toss-final-project/clipping-data.git
