@@ -1,0 +1,189 @@
+=== 표본 12회 / 6초 간격 ===
+── 표본 1 (07:13:52) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=176.45%  mem=994.6MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.38%  mem=56.29MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.76%  mem=11.57MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 6
+  active = 5
+[DB 대기 이벤트 (active)]
+  -/- = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=358434.0 TOTAL_TIME=145209.126111572 MAX=0.022929029 
+── 표본 2 (07:14:04) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=177.40%  mem=994.7MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=207.47%  mem=56.3MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=8.11%  mem=12.21MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  Client/ClientRead = 2
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=359861.0 TOTAL_TIME=145209.155785371 MAX=0.022929029 
+── 표본 3 (07:14:14) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=176.60%  mem=995.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=208.91%  mem=56MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.95%  mem=12.29MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=361299.0 TOTAL_TIME=145209.194406357 MAX=0.022929029 
+── 표본 4 (07:14:25) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=176.77%  mem=995.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=208.33%  mem=56.29MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.87%  mem=12.63MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 9
+  active = 1
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=362746.0 TOTAL_TIME=145209.258073848 MAX=0.022929029 
+── 표본 5 (07:14:36) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=175.71%  mem=995.5MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.68%  mem=56.22MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=8.06%  mem=12.56MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 9
+  active = 2
+[DB 대기 이벤트 (active)]
+  -/- = 3
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=364188.0 TOTAL_TIME=145209.303691248 MAX=0.022929029 
+── 표본 6 (07:14:47) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=176.79%  mem=995.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.56%  mem=56.18MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.98%  mem=12.79MiB / 15.61GiB
+[DB 상태 분포]
+  active = 5
+  idle in transaction = 5
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 5
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=365638.0 TOTAL_TIME=145209.338812123 MAX=0.022929029 
+── 표본 7 (07:14:57) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=177.80%  mem=995.2MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=206.16%  mem=56.25MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.99%  mem=12.55MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=367112.0 TOTAL_TIME=145209.42266436 MAX=0.022929029 
+── 표본 8 (07:15:08) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=177.53%  mem=995.8MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=206.64%  mem=55.95MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.80%  mem=12.6MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 6
+  active = 5
+[DB 대기 이벤트 (active)]
+  -/- = 5
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=368602.0 TOTAL_TIME=145209.516356046 MAX=0.022929029 
+── 표본 9 (07:15:19) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=177.43%  mem=996.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=209.21%  mem=55.41MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=8.03%  mem=12.47MiB / 15.61GiB
+[DB 상태 분포]
+  active = 6
+  idle in transaction = 5
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=370046.0 TOTAL_TIME=145209.588490681 MAX=0.022929029 
+── 표본 10 (07:15:30) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=175.53%  mem=996MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=207.30%  mem=54.92MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.82%  mem=12.93MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 5
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=371460.0 TOTAL_TIME=145209.712768099 MAX=0.022929029 
+── 표본 11 (07:15:40) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=176.66%  mem=996.6MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=206.39%  mem=53.95MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=7.80%  mem=12.61MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 5
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=372932.0 TOTAL_TIME=145209.915567749 MAX=0.026015154 
+── 표본 12 (07:15:51) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=84.96%  mem=996.9MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=4.84%  mem=53.24MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=0.00%  mem=12.66MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = VALUE=0.0 
+  hikaricp.connections.acquire = COUNT=373895.0 TOTAL_TIME=145210.043191655 MAX=0.026015154 
+=== 응답 크기 (부하와 무관하게 1회) ===
+  게스트 피드: 13660 bytes / 20 건

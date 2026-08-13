@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .bg{fill:#f5f7f4}.panel{fill:#fff;stroke:#c8d1cb;stroke-width:2}.card{fill:#fff9f0;stroke:#d9a76a;stroke-width:2}.soft{fill:#f7faf8;stroke:#9eada5;stroke-width:2}.band{fill:#f8e9d3;stroke:#dfb77f;stroke-width:2}
+      .title{font:700 50px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#173237}.sub{font:400 21px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#6a7a77}.h2{font:700 25px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#173237}.h3{font:700 19px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#173237}.body{font:400 16px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#415552}.small{font:400 13px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#687976}.mono{font:500 14px Consolas,'Malgun Gothic',monospace;fill:#334744}.chip{font:700 15px 'Malgun Gothic','Noto Sans KR',sans-serif;fill:#914b18}
+      .line{fill:none;stroke:#71827e;stroke-width:2.5;marker-end:url(#a)}.strong{fill:none;stroke:#28616a;stroke-width:4.5;marker-end:url(#as)}.pull{fill:none;stroke:#92715f;stroke-width:3.5;stroke-dasharray:10 8;marker-end:url(#ap)}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0V6L9 3Z" fill="#71827e"/></marker>
+    <marker id="as" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0V6L9 3Z" fill="#28616a"/></marker>
+    <marker id="ap" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0V6L9 3Z" fill="#92715f"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#20352f" flood-opacity=".10"/></filter>
+  </defs>
+
+  <rect width="1920" height="1080" class="bg"/>
+
+  <!-- Header -->
+  <rect x="70" y="38" width="605" height="38" rx="5" class="band"/>
+  <text x="90" y="64" class="chip">HK-TOSS-FINAL-PROJECT / BAMBI · FULL STACK + AI AGENT</text>
+  <text x="70" y="136" class="title">전체 시스템 아키텍처</text>
+  <text x="72" y="175" class="sub">외부 진입, Service 계층, Agent 계층의 책임과 단방향 호출 경계를 한 장에 정리했습니다.</text>
+
+  <g transform="translate(1210 48)">
+    <rect width="175" height="40" rx="20" class="band"/><text x="87" y="26" text-anchor="middle" class="chip">서브모듈 6개</text>
+    <rect x="192" width="175" height="40" rx="20" class="band"/><text x="279" y="26" text-anchor="middle" class="chip">LangGraph 8개</text>
+    <rect x="384" width="250" height="40" rx="20" class="band"/><text x="509" y="26" text-anchor="middle" class="chip">상주 Worker 5종 · 26개</text>
+  </g>
+
+  <rect x="70" y="202" width="1780" height="58" rx="10" class="band"/>
+  <text x="96" y="239" class="h3">핵심 불변식</text>
+  <text x="244" y="239" class="body">프론트엔드 → Service API → Agent API · Agent는 service-db를 직접 수정하지 않음 · 완성물은 Service Worker가 Pull하여 저장</text>
+
+  <!-- Panels -->
+  <rect x="70" y="290" width="300" height="635" rx="14" class="panel" filter="url(#shadow)"/>
+  <rect x="400" y="290" width="710" height="635" rx="14" class="panel" filter="url(#shadow)"/>
+  <rect x="1140" y="290" width="710" height="635" rx="14" class="panel" filter="url(#shadow)"/>
+
+  <!-- External entry -->
+  <text x="96" y="332" class="h2">외부 진입</text>
+  <text x="96" y="359" class="small">모든 공개 요청은 Nginx를 통과</text>
+
+  <rect x="96" y="390" width="248" height="152" rx="10" class="soft"/>
+  <text x="220" y="421" text-anchor="middle" class="h3">클라이언트</text>
+  <line x1="112" y1="438" x2="328" y2="438" stroke="#d5ddd8"/>
+  <text x="118" y="468" class="body">사용자 브라우저</text>
+  <text x="118" y="494" class="body">관리자 브라우저</text>
+  <text x="118" y="520" class="body">Chrome 클리퍼 · MCP 클라이언트</text>
+
+  <path d="M220 542V576" class="line"/>
+
+  <rect x="96" y="590" width="248" height="235" rx="10" class="card"/>
+  <text x="220" y="625" text-anchor="middle" class="h3">Nginx 리버스 프록시</text>
+  <text x="220" y="650" text-anchor="middle" class="small">HTTPS · 유일한 외부 공개 경계</text>
+  <line x1="116" y1="670" x2="324" y2="670" stroke="#e3c79f"/>
+  <text x="120" y="701" class="mono">/</text><text x="172" y="701" class="body">service-web</text>
+  <text x="120" y="733" class="mono">/admin</text><text x="202" y="733" class="body">admin-web</text>
+  <text x="120" y="765" class="mono">/api</text><text x="182" y="765" class="body">backend</text>
+  <text x="120" y="797" class="mono">/mcp</text><text x="182" y="797" class="body">mcp-server</text>
+  <text x="96" y="864" class="small">포트는 컨테이너 내부 기준</text>
+
+  <!-- Service layer -->
+  <text x="426" y="332" class="h2">SERVICE LAYER</text>
+  <text x="426" y="359" class="small">Spring Boot · 사용자 데이터와 최종 결과의 Source of Truth</text>
+
+  <!-- paint internal connectors before cards -->
+  <path d="M526 466V488H746V512" class="line"/>
+  <path d="M751 466V488H746V512" class="line"/>
+  <path d="M976 466V488H746V512" class="line"/>
+  <path d="M746 598V770" class="line"/>
+  <path d="M650 598V620H541V642" class="line"/>
+  <path d="M656 680H826" class="line"/>
+  <path d="M948 718V744H840V770" class="line"/>
+
+  <rect x="426" y="390" width="200" height="76" rx="9" class="card"/>
+  <text x="526" y="421" text-anchor="middle" class="h3">service-web :3000</text>
+  <text x="526" y="447" text-anchor="middle" class="small">Next.js · 사용자 화면</text>
+
+  <rect x="651" y="390" width="200" height="76" rx="9" class="card"/>
+  <text x="751" y="421" text-anchor="middle" class="h3">admin-web :3000</text>
+  <text x="751" y="447" text-anchor="middle" class="small">로컬 개발은 3001</text>
+
+  <rect x="876" y="390" width="200" height="76" rx="9" class="soft"/>
+  <text x="976" y="421" text-anchor="middle" class="h3">Service Scheduler</text>
+  <text x="976" y="447" text-anchor="middle" class="small">03시 준비 · 05시 생성 · 07시 공개</text>
+
+  <rect x="616" y="512" width="260" height="86" rx="10" class="card"/>
+  <text x="746" y="546" text-anchor="middle" class="h3">backend :8080</text>
+  <text x="746" y="573" text-anchor="middle" class="small">인증 · 인가 · CRUD · Agent Gateway</text>
+
+  <rect x="426" y="642" width="230" height="76" rx="9" class="soft"/>
+  <text x="541" y="673" text-anchor="middle" class="h3">Outbox</text>
+  <text x="541" y="699" text-anchor="middle" class="small">생성 요청 · 재시도 · lease</text>
+
+  <rect x="826" y="642" width="244" height="76" rx="9" class="soft"/>
+  <text x="948" y="673" text-anchor="middle" class="h3">Service Worker</text>
+  <text x="948" y="699" text-anchor="middle" class="small">상태 동기화 · Publish 저장</text>
+
+  <rect x="616" y="770" width="260" height="92" rx="12" class="card"/>
+  <text x="746" y="806" text-anchor="middle" class="h3">service-db</text>
+  <text x="746" y="833" text-anchor="middle" class="small">PostgreSQL · 원본 · 사용자 · Report/Card</text>
+
+  <!-- Agent layer -->
+  <text x="1166" y="332" class="h2">AGENT LAYER</text>
+  <text x="1166" y="359" class="small">FastAPI + LangGraph · AI 파생 데이터와 비동기 작업</text>
+
+  <!-- paint internal connectors before cards -->
+  <path d="M1306 718V790" class="line"/>
+  <path d="M1643 626V650H1460V790" class="line"/>
+  <path d="M1660 626V680" class="line"/>
+
+  <rect x="1170" y="390" width="272" height="78" rx="9" class="card"/>
+  <text x="1306" y="422" text-anchor="middle" class="h3">mcp-server :8100</text>
+  <text x="1306" y="448" text-anchor="middle" class="small">Wiki read/write · agent-db</text>
+
+  <rect x="1170" y="512" width="272" height="206" rx="10" class="card"/>
+  <text x="1306" y="546" text-anchor="middle" class="h3">agent-api :8000</text>
+  <text x="1306" y="573" text-anchor="middle" class="small">내부 API · LangGraph 8개</text>
+  <line x1="1192" y1="596" x2="1420" y2="596" stroke="#e3c79f"/>
+  <text x="1194" y="628" class="mono">/internal/v1/**</text>
+  <text x="1194" y="656" class="body">생성 요청 · 상태 조회</text>
+  <text x="1194" y="688" class="body">Publish Snapshot Claim / ACK</text>
+
+  <rect x="1472" y="390" width="342" height="236" rx="10" class="card"/>
+  <text x="1643" y="424" text-anchor="middle" class="h3">상주 Worker 5종 · 26개</text>
+  <line x1="1496" y1="444" x2="1790" y2="444" stroke="#e3c79f"/>
+  <text x="1500" y="479" class="body">Wiki</text><text x="1758" y="479" text-anchor="end" class="h3">6</text>
+  <text x="1500" y="511" class="body">Report</text><text x="1758" y="511" text-anchor="end" class="h3">10</text>
+  <text x="1500" y="543" class="body">Briefing</text><text x="1758" y="543" text-anchor="end" class="h3">8</text>
+  <text x="1500" y="575" class="body">URL 수집 · Global-content</text><text x="1758" y="575" text-anchor="end" class="h3">1 + 1</text>
+  <rect x="1500" y="592" width="286" height="24" rx="12" class="band"/>
+  <text x="1643" y="609" text-anchor="middle" class="small">AI 작업 24 + 수집 2</text>
+
+  <rect x="1500" y="680" width="314" height="88" rx="9" class="soft"/>
+  <text x="1657" y="713" text-anchor="middle" class="h3">외부 API</text>
+  <text x="1657" y="740" text-anchor="middle" class="small">OpenAI · Tavily · Naver · GDELT · Jina 외</text>
+
+  <rect x="1240" y="790" width="274" height="82" rx="11" class="soft"/>
+  <text x="1377" y="823" text-anchor="middle" class="h3">agent-db + pgvector</text>
+  <text x="1377" y="849" text-anchor="middle" class="small">Wiki · 관심사 · 검색 · 생성 상태</text>
+
+  <!-- Cross-boundary connections occupy the empty 30px gutter only -->
+  <path d="M876 555H1158" class="strong"/>
+  <rect x="908" y="524" width="220" height="24" rx="12" fill="#f5f7f4"/>
+  <text x="1018" y="541" text-anchor="middle" class="small">동기 HTTP · Bearer Token</text>
+
+  <path d="M1070 680H1158" class="pull"/>
+  <rect x="1000" y="696" width="180" height="24" rx="12" fill="#f5f7f4"/>
+  <text x="1090" y="713" text-anchor="middle" class="small">Pull · Claim / ACK</text>
+
+  <rect x="1168" y="884" width="646" height="24" rx="12" fill="#e9efeb"/>
+  <text x="1491" y="901" text-anchor="middle" class="small">Agent → Service 직접 호출 없음 · Agent는 service-db 접속 정보 없음</text>
+
+  <!-- Legend and repository strip -->
+  <g transform="translate(90 954)">
+    <line x1="0" y1="12" x2="62" y2="12" class="strong"/><text x="78" y="18" class="body">Service → Agent 동기 호출</text>
+    <line x1="350" y1="12" x2="412" y2="12" class="pull"/><text x="428" y="18" class="body">Service Worker Pull</text>
+    <line x1="660" y1="12" x2="722" y2="12" class="line"/><text x="738" y="18" class="body">계층 내부 흐름</text>
+  </g>
+
+  <line x1="70" y1="997" x2="1850" y2="997" stroke="#c9d1cc" stroke-width="2"/>
+  <text x="70" y="1033" class="h2">저장소 구성</text>
+  <text x="230" y="1032" class="h3">상위 bambi 1개</text><text x="382" y="1032" class="body">+</text>
+  <text x="414" y="1032" class="mono">service-web · admin-web · clipper · service-api · agent-api · build</text>
+  <text x="1160" y="1032" class="small">서브모듈 6개 · 조직 저장소 표현은 “상위 1개 + 서브모듈 6개”로 통일</text>
+  <text x="70" y="1064" class="small">현재 main 및 운영 컨테이너 기준 · 민감정보와 외부 공개 주소는 표시하지 않음</text>
+</svg>

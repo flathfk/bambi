@@ -1,0 +1,401 @@
+=== 표본 32회 / 6초 간격 ===
+── 표본 1 (05:10:49) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=9.77MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.36%  mem=705MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.07%  mem=61.1MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 2 (05:10:58) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=4.00%  mem=10.31MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=82.60%  mem=705.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=108.19%  mem=65.2MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 7
+  idle in transaction = 3
+  active = 1
+[DB 대기 이벤트 (active)]
+  Client/ClientRead = 1
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 3 (05:11:07) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=8.80%  mem=10.9MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=181.52%  mem=705.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.35%  mem=65.52MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 2
+  idle = 2
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 4 (05:11:17) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=8.35%  mem=11.49MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=182.24%  mem=706.2MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=198.73%  mem=66.4MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 5 (05:11:26) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=8.23%  mem=12.11MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=185.93%  mem=706.6MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.70%  mem=66.38MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 2
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 6 (05:11:37) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.88%  mem=12.4MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=185.86%  mem=707.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=198.87%  mem=66.71MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 7 (05:11:47) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=8.02%  mem=13.14MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=183.54%  mem=707.2MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=202.52%  mem=66.65MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 8 (05:11:57) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=8.16%  mem=13.7MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=183.96%  mem=707.9MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.75%  mem=67.32MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 9 (05:12:08) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.84%  mem=13.79MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=180.67%  mem=708.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=197.36%  mem=66.46MiB / 15.61GiB
+[DB 상태 분포]
+  active = 6
+  idle in transaction = 5
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 10 (05:12:18) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.52%  mem=14.07MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=180.71%  mem=708.7MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=198.01%  mem=66.88MiB / 15.61GiB
+[DB 상태 분포]
+  active = 5
+  idle in transaction = 5
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 11 (05:12:28) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.92%  mem=14.52MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=184.52%  mem=709.5MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=198.70%  mem=66.8MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 12 (05:12:37) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.80%  mem=14.47MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=186.01%  mem=709.7MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=199.72%  mem=66.62MiB / 15.61GiB
+[DB 상태 분포]
+  active = 7
+  idle in transaction = 3
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 13 (05:12:47) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.76%  mem=14.7MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=184.81%  mem=710.9MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=196.50%  mem=67.13MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 5
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 14 (05:12:57) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.69%  mem=14.92MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=182.07%  mem=711.6MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.58%  mem=66.59MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 2
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 15 (05:13:08) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.67%  mem=14.97MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=184.08%  mem=712.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.35%  mem=67.14MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 9
+  active = 2
+[DB 대기 이벤트 (active)]
+  -/- = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 16 (05:13:18) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.48%  mem=14.98MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=184.34%  mem=713MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.27%  mem=67.28MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 6
+  active = 5
+[DB 대기 이벤트 (active)]
+  -/- = 4
+  Client/ClientRead = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 17 (05:13:28) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.67%  mem=15.17MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=183.67%  mem=714.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=201.55%  mem=67.14MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 6
+  active = 5
+[DB 대기 이벤트 (active)]
+  -/- = 5
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 18 (05:13:39) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.76%  mem=15.57MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=183.25%  mem=715MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=202.72%  mem=66.93MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 2
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 19 (05:13:49) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.50%  mem=15.89MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=181.53%  mem=716.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=202.70%  mem=67.2MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 9
+  active = 2
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 20 (05:13:59) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.70%  mem=15.8MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=182.73%  mem=717.2MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=200.96%  mem=67.3MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 2
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 21 (05:14:09) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.54%  mem=16.4MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=178.27%  mem=718.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=202.78%  mem=67.34MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 6
+  active = 5
+[DB 대기 이벤트 (active)]
+  Client/ClientRead = 2
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 22 (05:14:19) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.48%  mem=16.44MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=180.92%  mem=718.7MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=202.65%  mem=67.49MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 23 (05:14:29) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.17%  mem=16.72MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=181.19%  mem=719.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.63%  mem=67.24MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 9
+  active = 1
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 24 (05:14:39) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=7.03%  mem=16.25MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=182.17%  mem=719.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.79%  mem=67.37MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 3
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 5
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 25 (05:14:48) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=6.92%  mem=14.5MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=180.90%  mem=718.9MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=203.99%  mem=70.31MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 26 (05:14:58) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=12.5MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.30%  mem=718.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.06%  mem=66.94MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 27 (05:15:07) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=11.83MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.43%  mem=718.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.05%  mem=66.82MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 28 (05:15:16) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=11.57MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.28%  mem=718.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=5.14%  mem=66.94MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 29 (05:15:24) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=11.45MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.28%  mem=718.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.14%  mem=67.24MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 30 (05:15:33) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=10.86MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.39%  mem=718.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.06%  mem=67.28MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 31 (05:15:42) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=10.62MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.49%  mem=718.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.06%  mem=67.36MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+── 표본 32 (05:15:51) ──
+[CPU/MEM]
+alphacatcher9-nginx-1  cpu=0.00%  mem=10.22MiB / 15.61GiB
+alphacatcher9-backend-1  cpu=0.45%  mem=718.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=4.75%  mem=67.3MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+=== 응답 크기 (부하와 무관하게 1회) ===
+  게스트 피드: 13660 bytes / 20 건

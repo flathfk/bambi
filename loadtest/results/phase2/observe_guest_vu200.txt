@@ -1,0 +1,192 @@
+=== 표본 12회 / 6초 간격 ===
+── 표본 1 (06:28:59) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=173.30%  mem=726.7MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=207.30%  mem=51.76MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=9.77%  mem=15.62MiB / 15.61GiB
+[DB 상태 분포]
+  active = 5
+  idle in transaction = 5
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 2 (06:29:11) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=172.25%  mem=726.9MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.13%  mem=51.33MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=9.88%  mem=16.24MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 6
+  active = 5
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 3 (06:29:23) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=173.74%  mem=726.9MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=204.76%  mem=51.52MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=10.20%  mem=16.92MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 4 (06:29:34) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=175.39%  mem=726.8MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=204.31%  mem=51.52MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=9.83%  mem=16.98MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 2
+  idle = 2
+[DB 대기 이벤트 (active)]
+  -/- = 4
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 5 (06:29:45) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=176.00%  mem=727MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=203.62%  mem=51.7MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=9.53%  mem=17.14MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 6 (06:29:57) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=174.77%  mem=727.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.25%  mem=51.75MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=10.01%  mem=17.21MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 3
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 7 (06:30:09) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=174.54%  mem=727.3MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=203.55%  mem=51.32MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=10.37%  mem=17.22MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 8 (06:30:20) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=179.00%  mem=727.1MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=201.22%  mem=51.39MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=10.28%  mem=16.88MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 2
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 4
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 9 (06:30:32) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=175.89%  mem=727.2MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=202.43%  mem=51.32MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=9.38%  mem=17.02MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 8
+  active = 3
+[DB 대기 이벤트 (active)]
+  -/- = 4
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 10 (06:30:44) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=174.78%  mem=727.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=205.68%  mem=51.59MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=10.12%  mem=17.17MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 4
+[DB 대기 이벤트 (active)]
+  Client/ClientRead = 2
+  -/- = 2
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 11 (06:30:56) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=174.05%  mem=727.7MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=204.20%  mem=51.75MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=10.05%  mem=16.93MiB / 15.61GiB
+[DB 상태 분포]
+  idle in transaction = 7
+  active = 3
+  idle = 1
+[DB 대기 이벤트 (active)]
+  -/- = 3
+  Client/ClientRead = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+── 표본 12 (06:31:06) ──
+[CPU/MEM]
+alphacatcher9-backend-1  cpu=0.31%  mem=726.4MiB / 15.61GiB
+alphacatcher9-postgres-1  cpu=0.00%  mem=51.24MiB / 15.61GiB
+alphacatcher9-nginx-1  cpu=0.00%  mem=12.5MiB / 15.61GiB
+[DB 상태 분포]
+  idle = 10
+  active = 1
+[DB 대기 이벤트 (active)]
+  -/- = 1
+[백엔드 커넥션 수 / 풀 최대 10]
+  backend = 10
+[Hikari 대기]
+  hikaricp.connections.pending = 측정불가(actuator 미탑재)
+  hikaricp.connections.acquire = 측정불가(actuator 미탑재)
+=== 응답 크기 (부하와 무관하게 1회) ===
+  게스트 피드: 13660 bytes / 20 건
