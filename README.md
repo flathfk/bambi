@@ -9,6 +9,24 @@
 서버가 둘입니다. 사용자가 쓰는 **service**, AI가 도는 **agent**.
 저는 **그 사이를 오가는 연동 전부**를 맡았습니다. AI가 무엇을 하는지가 아니라, **그 결과를 어떻게 안전하게 주고받는지**가 제 일이었습니다.
 
+🔗 **배포** — [hktoss.elixirevo.com](https://hktoss.elixirevo.com/) (서비스 웹) · `/admin` (관리자 웹, 계정 필요)
+
+## 전체 시스템 아키텍처
+
+![밤새비서 전체 시스템 아키텍처 — 외부 진입 · Service 계층 · Agent 계층](docs/portfolio/architecture.png)
+
+> 데이터 흐름까지 포함한 상세본: [architecture-and-data.pdf](docs/portfolio/architecture-and-data.pdf)
+
+**제 담당 구간은 가운데 `backend`의 Agent Gateway와 오른쪽 Agent 계층 사이의 왕복 전부입니다.**
+
+그림 상단의 핵심 규칙 3개가 곧 제가 지킨 경계입니다.
+
+| 규칙 | 내가 한 일 |
+| --- | --- |
+| ① 프론트는 Agent를 직접 부르지 않는다 | 모든 agent 호출이 **Agent Gateway 한 곳**을 지나게 배선 — 위키 조회도 중계로 감싸 입력값 clamp·404 처리를 한 곳에서 |
+| ② Agent는 service-db를 건드리지 않는다 | 양쪽이 각자 DB를 가지므로 **컨텍스트를 동기화**해야 함 → 버전 정합·409 재전송 ([2-1](https://github.com/flathfk/bambi-service-api#2-1-성공200으로-위장된-실패)) |
+| ③ 완성물은 Service 워커가 당겨온다(Pull) | **claim → upsert → ack** 3단계를 설계. Push가 아니라 Pull이라 "호출은 됐는데 저장 전에 죽는" 구간이 없음 |
+
 ## 기여 요약
 
 | 레포 | 내 몫 | 규모 |
