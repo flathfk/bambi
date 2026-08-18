@@ -1,3 +1,67 @@
+> **📌 이 저장소는 포트폴리오용 포크입니다.**
+> 원본: [hk-toss-final-project/bambi](https://github.com/hk-toss-final-project/bambi) · 팀 9명 · 2026.07~08 (4주)
+> 아래는 **임소라(flathfk)가 이 프로젝트에서 맡은 부분**이고, 원본 README는 이어서 나옵니다.
+
+# 밤새비서(BamBi) — 내가 한 일
+
+한경 × 토스뱅크 FullStack-LLM 부트캠프 **파이널 프로젝트 · 2등** 🏆
+
+서버가 둘입니다. 사용자가 쓰는 **service**, AI가 도는 **agent**.
+저는 **그 사이를 오가는 연동 전부**를 맡았습니다. AI가 무엇을 하는지가 아니라, **그 결과를 어떻게 안전하게 주고받는지**가 제 일이었습니다.
+
+## 기여 요약
+
+| 레포 | 내 몫 | 규모 |
+| --- | --- | --- |
+| [bambi-service-api](https://github.com/flathfk/bambi-service-api) | agent 연동 경계 · 아침 브리핑 · 카드 발행 · 관리자 API | 53커밋 / +8,245줄 · PR 14건 · 마이그레이션 4개 |
+| [bambi-admin-web](https://github.com/flathfk/bambi-admin-web) | 관리자 화면 전체 | `app/` 1,294 / 1,512줄 (**85%**) |
+| [bambi-agent-api](https://github.com/flathfk/bambi-agent-api) | **연동 계약 문서 작성·유지** · taxonomy 매칭 | 15커밋 · PR 3건 |
+
+테스트 클래스 15개 직접 작성.
+
+## 담당 영역
+
+| 영역 | 백엔드로 한 일 |
+| --- | --- |
+| 사용자 컨텍스트 | 가입 이벤트 → AI 전달. 버전 정합 · 409 재전송 |
+| 저장 자료 중계 | 저장 이벤트 → 분기(클리핑 / URL) → 전달 |
+| 아침 브리핑 | 주제 결정 **계약** · 폴백 2단 · 타임아웃 분리 |
+| 온디맨드 생성 | 즉시 접수 API · 멱등키 · 관심사 검증 정책 |
+| 위키 조회 중계 | 화면 요청 → AI 중계 · 입력값 clamp · 404 → 빈 목록 |
+| 카드 수령 | claim / 멱등 upsert / ack · 재시도 판단 |
+| 생성 상태 | 펜딩 수명주기 · 완성 카드와 연결 |
+| 관리자 | 지표 API · 실패 필터 · 복구 버튼 + 화면 3개 |
+
+## 트러블슈팅 — 다섯 건의 공통점
+
+**"정상"이라는 신호가 가장 오래 사람을 속입니다.**
+
+| 사건 | 정상처럼 보이게 만든 신호 | 상세 |
+| --- | --- | --- |
+| 관심사가 AI에 연결되지 않음 | 응답이 **200** | [service-api](https://github.com/flathfk/bambi-service-api#2-1-성공200으로-위장된-실패) |
+| 아침 주제가 엉뚱함 (`서울`, `DBeaver`) | 점수 **1위** | [service-api](https://github.com/flathfk/bambi-service-api#2-2-아침-브리핑-주제-계약을-다시-설계) |
+| taxonomy 매칭 0건 | 폴백이 **돌고 있었다** | [agent-api](https://github.com/flathfk/bambi-agent-api#2-3-폴백이-도는데-결과가-0건이던-문제) |
+| 카드 형식 값 불일치 | 요청 값을 **그대로 되돌려줬다** | [service-api](https://github.com/flathfk/bambi-service-api#2-4-계약을-코드로-검증해-불일치-2건) |
+| 마이그레이션 번호 충돌 | git이 **clean** | [service-api](https://github.com/flathfk/bambi-service-api#2-5-마이그레이션-번호-충돌) |
+
+다섯 건 다 에러 로그로 찾은 게 아니라, **정상이라는 표시를 의심해서** 찾았습니다.
+
+## 시스템 구성 (팀 전체)
+
+내가 맡지 않은 레포는 원본 org를 링크합니다.
+
+| 레포 | 역할 | 담당 |
+| --- | --- | --- |
+| [bambi-service-api](https://github.com/flathfk/bambi-service-api) | 서비스 API (Spring Boot) | 팀 공동 — **연동/관리자 = 나** |
+| [bambi-agent-api](https://github.com/flathfk/bambi-agent-api) | AI Agent (Python) | LLM팀 — **계약 문서 = 나** |
+| [bambi-admin-web](https://github.com/flathfk/bambi-admin-web) | 관리자 웹 (Next.js) | **나 (85%)** |
+| [bambi-service-web](https://github.com/hk-toss-final-project/bambi-service-web) | 사용자 웹 (Next.js) | 김여진 |
+| [bambi-build](https://github.com/hk-toss-final-project/bambi-build) | 배포 · 인프라 | 팀 공동 |
+| [bambi-clipper](https://github.com/hk-toss-final-project/bambi-clipper) | 클리핑 확장 | 팀 공동 |
+
+---
+---
+
 # Bambi
 
 ## 사용법
