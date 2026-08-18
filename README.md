@@ -1,5 +1,5 @@
 > **📌 이 저장소는 포트폴리오용 포크입니다.**
-> 원본: [hk-toss-final-project/bambi](https://github.com/hk-toss-final-project/bambi) · 팀 9명 · 2026.07~08 (4주)
+> 원본: [hk-toss-final-project/bambi](https://github.com/hk-toss-final-project/bambi) · 팀 8명 · 2026.07~08 (4주)
 > 아래는 **임소라(flathfk)가 이 프로젝트에서 맡은 부분**이고, 원본 README는 이어서 나옵니다.
 
 # 밤새비서(BamBi) — 내가 한 일
