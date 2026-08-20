@@ -29,13 +29,13 @@
 
 ## 기여 요약
 
-| 레포 | 내 몫 | 규모 |
-| --- | --- | --- |
-| [bambi-service-api](https://github.com/flathfk/bambi-service-api) | agent 연동 경계 · 아침 브리핑 · 카드 발행 · 관리자 API | 53커밋 / +8,245줄 · PR 14건 · 마이그레이션 4개 |
-| [bambi-admin-web](https://github.com/flathfk/bambi-admin-web) | 관리자 화면 전체 | `app/` 1,294 / 1,512줄 (**85%**) |
-| [bambi-agent-api](https://github.com/flathfk/bambi-agent-api) | **연동 계약 문서 작성·유지** · taxonomy 매칭 | 15커밋 · PR 3건 |
+| 레포 | 내 몫 |
+| --- | --- |
+| [bambi-service-api](https://github.com/flathfk/bambi-service-api) | agent 연동 경계 · 아침 브리핑 · 카드 발행 · 관리자 API · 스키마 마이그레이션 |
+| [bambi-admin-web](https://github.com/flathfk/bambi-admin-web) | 관리자 화면 **단독 개발** |
+| [bambi-agent-api](https://github.com/flathfk/bambi-agent-api) | **연동 계약 문서 작성·유지** · taxonomy 매칭 |
 
-테스트 클래스 15개 직접 작성.
+서비스 계층 테스트 코드도 직접 작성했습니다 (JUnit).
 
 ## 담당 영역
 
@@ -72,7 +72,7 @@
 | --- | --- | --- |
 | [bambi-service-api](https://github.com/flathfk/bambi-service-api) | 서비스 API (Spring Boot) | 팀 공동 — **연동/관리자 = 나** |
 | [bambi-agent-api](https://github.com/flathfk/bambi-agent-api) | AI Agent (Python) | LLM팀 — **계약 문서 = 나** |
-| [bambi-admin-web](https://github.com/flathfk/bambi-admin-web) | 관리자 웹 (Next.js) | **나 (85%)** |
+| [bambi-admin-web](https://github.com/flathfk/bambi-admin-web) | 관리자 웹 (Next.js) | **나 (단독)** |
 | [bambi-service-web](https://github.com/hk-toss-final-project/bambi-service-web) | 사용자 웹 (Next.js) | 김여진 |
 | [bambi-build](https://github.com/hk-toss-final-project/bambi-build) | 배포 · 인프라 | 팀 공동 |
 | [bambi-clipper](https://github.com/hk-toss-final-project/bambi-clipper) | 클리핑 확장 | 팀 공동 |
